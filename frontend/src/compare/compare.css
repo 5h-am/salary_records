@@ -1,0 +1,245 @@
+.compare-page {
+  padding: var(--space-xl) 0;
+}
+
+.id-input-form {
+  display: flex;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 40rem;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.compare-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.level-diff-banner {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.compare-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.company-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.id-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--color-surface-2);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.id-text {
+  font-size: 0.7rem;
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+.company-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.company-link:hover .company-name {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.panel-header {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  box-shadow: 0 1px 3px rgba(44, 57, 71, 0.08);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.role-text {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.location-text {
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+}
+
+.metric-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.metric-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  box-shadow: 0 1px 3px rgba(44, 57, 71, 0.08);
+}
+
+.metric-card.total {
+  border-color: rgba(194, 165, 109, 0.3);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.delta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+.delta.positive { color: var(--color-positive); background-color: rgba(74, 138, 101, 0.1); }
+.delta.negative { color: var(--color-negative); background-color: rgba(168, 69, 60, 0.1); }
+.delta.zero { color: var(--color-text-dim); }
+
+.metric-value {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.metric-value.accent {
+  color: var(--color-accent);
+}
+
+.progress-container {
+  height: 4px;
+  background-color: var(--color-bg);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.6s ease-out;
+}
+
+.panel-footer {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 0 1px 3px rgba(44, 57, 71, 0.08);
+}
+
+.market-assessment .label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.interpretation {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: var(--space-xs) 0;
+}
+
+.score-val {
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+}
+
+.compare-loading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 60em) {
+  .compare-grid, .compare-loading {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 30em) {
+  .id-input-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+}

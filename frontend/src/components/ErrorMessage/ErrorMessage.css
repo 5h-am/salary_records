@@ -1,0 +1,32 @@
+.error-message {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: rgba(196, 122, 114, 0.1);
+  color: var(--color-negative);
+  padding: 0.75em 1em;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border: 1px solid rgba(196, 122, 114, 0.2);
+}
+
+.error-icon {
+  font-weight: bold;
+}
+
+.error-text {
+  flex: 1;
+}
+
+.error-retry-btn {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  padding: 0;
+  font-size: inherit;
+  opacity: 0.8;
+}
+
+.error-retry-btn:hover {
+  opacity: 1;
+}

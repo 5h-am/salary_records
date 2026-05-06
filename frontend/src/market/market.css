@@ -1,0 +1,285 @@
+.market-page {
+  padding: var(--space-xl) 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.market-filters {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+  min-width: 12rem;
+}
+
+.filter-group label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table-container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  box-shadow: 0 1px 3px rgba(44, 57, 71, 0.08);
+}
+
+.salary-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  z-index: 10;
+}
+
+
+
+.id-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.copy-btn {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+.company-info-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.company-info-link:hover .company-name {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.role-name {
+  font-weight: 500;
+}
+
+.salary-id {
+  font-size: 0.65rem;
+  color: var(--color-text-dim);
+  font-family: var(--font-body);
+}
+
+.level-badge {
+  padding: 0.25em 0.5em;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.company-avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.tc-cell {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl) !important;
+  color: var(--color-text-muted);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) 0;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.pagination-controls {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+tr.selected-row {
+  background-color: rgba(194, 165, 109, 0.08);
+}
+
+.salary-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.salary-checkbox:checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.salary-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--palette-navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.compare-bar {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  box-shadow: 0 8px 32px rgba(44, 57, 71, 0.2);
+  z-index: 100;
+  animation: bar-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bar-in {
+  from {
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.compare-bar-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-count {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.selection-hint {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.compare-bar-actions {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.input-with-indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-indicator input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.input-searching {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 600ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 48em) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 30em) {
+  .market-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    min-width: 0;
+  }
+}

@@ -1,0 +1,114 @@
+.calculate-page {
+  padding: var(--space-xl) 0;
+}
+
+.page-subtitle {
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xl);
+}
+
+.calculate-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.calculate-card, .result-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.calculate-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.calculate-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.calculate-form label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-error {
+  margin-top: var(--space-md);
+}
+
+.form-footer {
+  margin-top: var(--space-xl);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculate-submit {
+  min-width: 12rem;
+}
+
+.result-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-md);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.result-item.full {
+  grid-column: span 2;
+}
+
+.result-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.result-value {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.result-value.accent {
+  color: var(--color-accent);
+}
+
+@media (max-width: 60em) {
+  .calculate-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 30em) {
+  .calculate-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+  .result-item.full {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Salary {
+  id                       String     @id @default(uuid())
+  company                  String
+  role                     String
+  level                    Level
+  location                 String
+  experience_years         Int
+  base_salary              Int
+  bonus                    Int        @default(0)
+  stock                    Int        @default(0)
+  total_compensation       Int
+  confidence_score         Confidence
+  quality_score            Float
+  market_value_score       Float?
+  market_score_computed_at DateTime?
+  insufficient_data        Boolean    @default(false)
+  peer_group_size          Int        @default(0)
+  created_at               DateTime   @default(now())
+  updated_at               DateTime   @updatedAt
+}
+
+enum Level {
+  L3
+  L4
+  L5
+}
+
+enum Confidence {
+  A
+  B
+  C
+  D
+  E
+  F
+}
